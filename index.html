@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/style.css">
+    <title>Tip Calculator</title>
+</head>
+<body>
+
+    <form>
+        <label for="bill">How much is the bill?</label>
+            <input type="text" name="bill"><br>
+        <label for="percent">How much do you want to tip?</label>
+            <input type="text" name="percent">%<br>
+        <label for="split">Are you splitting the bill?</label>
+            <input type="radio" name="split" value="yes">Yes
+            <input type="radio" name="split" value="no" checked>No<br>
+        <label for="numPeople">Between how many people?</label>
+            <input type="number" name="numPeople" step="1">
+    </form>
+
+    <script src="assets/logic.js"></script>
+</body>
+</html>
