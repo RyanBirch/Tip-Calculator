@@ -16,16 +16,17 @@ noSplit.addEventListener('click', () => {
     splitOption.style.display = 'none'
 })
 
+let bill, percent, split, between
 
 // form is submitted
 tipForm.addEventListener('submit', () => {
     event.preventDefault()
 
     // grab values from form
-    let bill = parseFloat(document.querySelector('input[name=bill]').value)
-    let percent = parseFloat(document.querySelector('input[name=percent]').value) / 100
-    let split = (document.querySelector('input[name=split]:checked').value === 'yes') ? true : false
-    let between = (split) ? parseFloat(document.querySelector('input[name=between]').value) : undefined
+    bill = parseFloat(document.querySelector('input[name=bill]').value)
+    percent = parseFloat(document.querySelector('input[name=percent]').value) / 100
+    split = (document.querySelector('input[name=split]:checked').value === 'yes') ? true : false
+    between = (split) ? parseFloat(document.querySelector('input[name=between]').value) : undefined
 
     // calculate tip
     let tipTotal = bill * percent
@@ -33,10 +34,13 @@ tipForm.addEventListener('submit', () => {
         tipTotal /= between
     }
 
-    result.innerHTML = 'Tip: ' + tipTotal
+    result.innerHTML = 'Tip: ' + tipTotal.toFixed(2)
 })
 
 
+// reset input fields
 reset.addEventListener('click', () => {
-    
+    tipForm.reset()
+    splitOption.style.display = 'none'
+    result.innerHTML = ''
 })
