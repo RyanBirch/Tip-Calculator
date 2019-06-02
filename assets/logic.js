@@ -10,5 +10,9 @@ tipForm.addEventListener('submit', () => {
     let split = (document.querySelector('input[name=split]:checked').value === 'yes') ? true : false
     let between = (split) ? parseFloat(document.querySelector('input[name=between]').value) : undefined
 
-    // let tipTotal = 
+    let tipTotal = bill * percent
+    if (split) {
+        tipTotal /= between
+    }
+    result.innerHTML = 'Tip: ' + tipTotal
 })
