@@ -11,16 +11,19 @@
 
     <form id="tip-form">
         How much is the bill?
-            <input type="text" name="bill"><br>
+            <input type="text" name="bill" required><br>
         How much do you want to tip?
-            <input type="text" name="percent">%<br>
+            <input type="text" name="percent" required>%<br>
         Are you splitting the bill?
-            <input type="radio" name="split" value="yes">Yes
-            <input type="radio" name="split" value="no" checked>No<br>
-        Between how many people?
-            <input type="number" name="between" step="1"><br>
+            <input type="radio" name="split" value="yes" id="confirm-split">Yes
+            <input type="radio" name="split" value="no" id="no-split" checked>No<br>
+        <div id="split-option">
+            Between how many people?
+                <input type="number" name="between" step="1"><br>
+        </div>
         <input type="submit" value="Submit" id="submit-form">
     </form>
+    <button id="reset">Reset</button>
 
     <div id="result"></div>
 
