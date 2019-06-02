@@ -9,7 +9,7 @@
 </head>
 <body>
 
-    <form>
+    <form id="tip-form">
         <label for="bill">How much is the bill?</label>
             <input type="text" name="bill"><br>
         <label for="percent">How much do you want to tip?</label>
@@ -17,9 +17,12 @@
         <label for="split">Are you splitting the bill?</label>
             <input type="radio" name="split" value="yes">Yes
             <input type="radio" name="split" value="no" checked>No<br>
-        <label for="numPeople">Between how many people?</label>
-            <input type="number" name="numPeople" step="1">
+        <label for="between">Between how many people?</label>
+            <input type="number" name="between" step="1"><br>
+        <input type="submit" value="Submit" id="submit-form">
     </form>
+
+    <div id="result"></div>
 
     <script src="assets/logic.js"></script>
 </body>
