@@ -3,9 +3,12 @@ let result = document.getElementById('result')
 
 tipForm.addEventListener('submit', () => {
     event.preventDefault()
-    let bill = document.querySelector('input[name=bill]').value
-    let percent = document.querySelector('input[name=percent]').value
+
+    // grab values from form
+    let bill = parseFloat(document.querySelector('input[name=bill]').value)
+    let percent = parseFloat(document.querySelector('input[name=percent]').value) / 100
     let split = (document.querySelector('input[name=split]:checked').value === 'yes') ? true : false
-    let between = 1
-    if (split) between = document.querySelector('input[name=between]').value 
+    let between = (split) ? parseFloat(document.querySelector('input[name=between]').value) : undefined
+
+    // let tipTotal = 
 })
