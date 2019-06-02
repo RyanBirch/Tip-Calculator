@@ -28,17 +28,20 @@ tipForm.addEventListener('submit', () => {
     split = (document.querySelector('input[name=split]:checked').value === 'yes') ? true : false
     between = (split) ? parseFloat(document.querySelector('input[name=between]').value) : undefined
 
-    // calculate tip
-    let tipTotal = bill * percent
-    if (split) {
-        tipTotal /= between
-    }
+    if (bill <= 0 || percent <= 0 || between <= 0) {
+        result.innerHTML = 'Please enter positive values'
 
-    result.innerHTML = 'Tip: ' + tipTotal.toFixed(2)
+    } else {
+        // calculate tip
+        let tipTotal = bill * percent
+        if (split) tipTotal /= between
+
+        result.innerHTML = 'Tip: ' + tipTotal.toFixed(2)
+    }
 })
 
 
-// reset input fields
+// reset input fields and html
 reset.addEventListener('click', () => {
     tipForm.reset()
     splitOption.style.display = 'none'
