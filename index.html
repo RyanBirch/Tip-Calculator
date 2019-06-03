@@ -9,25 +9,42 @@
 </head>
 <body>
 
-    <h1>Tip Calculator</h1>
+    <div class="wrapper">
 
-    <form id="tip-form">
-        How much is the bill?
-            <input type="text" name="bill" required><br>
-        How much do you want to tip?
-            <input type="text" name="percent" required>%<br>
-        Are you splitting the bill?
-            <input type="radio" name="split" value="yes" id="confirm-split">Yes
-            <input type="radio" name="split" value="no" id="no-split" checked>No<br>
-        <div id="split-option">
-            Between how many people?
-                <input type="number" name="between" step="1"><br>
-        </div>
-        <input type="submit" value="Submit" id="submit-form">
-    </form>
-    <button type="button" id="reset">Reset</button>
+        <h1>Tip Calculator</h1>
+    
+        <form id="tip-form">
+            <div class="row">
+                <div class="left">How much is the bill?</div>
+                <div class="right"><input type="text" name="bill" required></div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="left">How much do you want to tip?</div>
+                <div class="right"><input type="text" name="percent" required>%</div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="left">Are you splitting the bill?</div>
+                <div class="right">
+                    <input type="radio" name="split" value="yes" id="confirm-split">Yes
+                    <input type="radio" name="split" value="no" id="no-split" checked>No
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div id="split-option">
+                    <div class="left">Between how many people?</div>
+                    <div class="right"><input type="number" name="between" step="1"></div><br>
+                </div>
+            </div>
+            <div class="left"><button type="submit" id="submit-form">Calculate</button></div>
+            <div class="right"><button type="reset" id="reset">Reset</button></div>
+        </form>
+    
+        <div id="result"></div>
 
-    <div id="result"></div>
+    </div> <!-- wrapper -->
 
     <script src="assets/logic.js"></script>
 </body>

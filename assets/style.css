@@ -1,0 +1,30 @@
+.wrapper {
+    text-align: center;
+    position: relative;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.left {
+    width: 49.5%;
+    float: left;
+    text-align: right;
+    margin-top: 0.5em;
+}
+
+.right {
+    width: 49.5%;
+    float: right;
+    text-align: left;
+    margin-top: 0.5em;
+}
+
+#result {
+    text-align: center;
+    margin-top: 0.5em;
+}
+

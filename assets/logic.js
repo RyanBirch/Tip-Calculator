@@ -1,17 +1,19 @@
-let tipForm = document.getElementById('tip-form')
-let result = document.getElementById('result')
-let reset = document.getElementById('reset')
+const tipForm = document.getElementById('tip-form')
+const result = document.getElementById('result')
+const reset = document.getElementById('reset')
 
 // hide or show split option depending on user input
-let splitOption = document.getElementById('split-option')
+const splitOption = document.getElementById('split-option')
 splitOption.style.display = 'none'
 
-let confirmSplit = document.getElementById('confirm-split')
+// show if the user wants to split the bill
+const confirmSplit = document.getElementById('confirm-split')
 confirmSplit.addEventListener('click', () => {
     splitOption.style.display = 'block'
 })
 
-let noSplit = document.getElementById('no-split')
+// hide if the user doesn't want to split the bill
+const noSplit = document.getElementById('no-split')
 noSplit.addEventListener('click', () => {
     splitOption.style.display = 'none'
 })
@@ -41,9 +43,8 @@ tipForm.addEventListener('submit', () => {
 })
 
 
-// reset input fields and html
+// reset html
 reset.addEventListener('click', () => {
-    tipForm.reset()
     splitOption.style.display = 'none'
     result.innerHTML = ''
 })
