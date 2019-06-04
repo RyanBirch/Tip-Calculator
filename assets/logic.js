@@ -36,9 +36,9 @@ tipForm.addEventListener('submit', () => {
     } else {
         // calculate tip
         let tipTotal = bill * percent
-        if (split) tipTotal /= between
+        if (split && between) tipTotal /= between
 
-        result.innerHTML = 'Tip: ' + tipTotal.toFixed(2)
+        result.innerHTML = 'Tip: $' + tipTotal.toFixed(2)
     }
 })
 
