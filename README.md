@@ -12,4 +12,4 @@
 
 ---
 
-## See the app here: <https://ryanbirch.github.io/Tip-Calculator/>
+## See the app here: <a href="https://ryanbirch.github.io/Tip-Calculator/" target="_blank">Tip Calculator</a>
